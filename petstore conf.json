@@ -1,0 +1,114 @@
+{
+    "name": "Swagger Petstore",
+    "favicon": "https://petstore.swagger.io/favicon.ico",
+    "baseUrl": "https://petstore.swagger.io/v2",
+    "pages": [
+      {
+        "name": "Pets",
+        "id": "pets",
+        "description": "Operations about pets",
+        "methods": {
+          "getAll": {
+            "url": "/pet/findByStatus",
+            "queryParams": [
+              {
+                "name": "status",
+                "value": "available",
+                "label": "Status",
+                "type": "select",
+                "options": ["available", "pending", "sold"]
+              }
+            ],
+            "display": {
+              "type": "table"
+            }
+          },
+          "getSingle": {
+            "url": "/pet/:petId",
+            "queryParams": []
+          },
+          "post": {
+            "url": "/pet",
+            "fields": [
+              {
+                "name": "id",
+                "label": "ID",
+                "type": "text"
+              },
+              {
+                "name": "name",
+                "label": "Name",
+                "type": "text"
+              },
+              {
+                "name": "status",
+                "label": "Status",
+                "type": "select",
+                "options": ["available", "pending", "sold"]
+              }
+            ]
+          },
+          "delete": {
+            "url": "/pet/:petId"
+          }
+        }
+      },
+      {
+        "name": "Orders",
+        "id": "orders",
+        "description": "Operations about orders",
+        "methods": {
+          "getAll": {
+            "url": "/store/inventory",
+            "display": {
+              "type": "table"
+            }
+          },
+          "getSingle": {
+            "url": "/store/order/:orderId",
+            "queryParams": []
+          },
+          "post": {
+            "url": "/store/order",
+            "fields": [
+              {
+                "name": "id",
+                "label": "ID",
+                "type": "text"
+              },
+              {
+                "name": "petId",
+                "label": "Pet ID",
+                "type": "text"
+              },
+              {
+                "name": "quantity",
+                "label": "Quantity",
+                "type": "number"
+              },
+              {
+                "name": "shipDate",
+                "label": "Ship Date",
+                "type": "text"
+              },
+              {
+                "name": "status",
+                "label": "Status",
+                "type": "select",
+                "options": ["placed", "approved", "delivered"]
+              },
+              {
+                "name": "complete",
+                "label": "Complete",
+                "type": "boolean"
+              }
+            ]
+          },
+          "delete": {
+            "url": "/store/order/:orderId"
+          }
+        }
+      }
+    ]
+  }
+  

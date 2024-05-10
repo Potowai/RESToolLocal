@@ -1,0 +1,172 @@
+{
+    "name": "Local API",
+    "favicon": "",
+    "baseUrl": "http://localhost:3000/api",
+    "pages": [
+      {
+        "name": "Posts",
+        "id": "posts",
+        "description": "Operations about posts",
+        "methods": {
+          "getAll": {
+            "url": "/posts",
+            "display": {
+              "type": "table"
+            },
+            "queryParams": [
+                {
+                  "name": "search",
+                  "value": "",
+                  "label": "Search",
+                  "type": "text"
+                }
+              ],
+            "fields": [
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "text"
+                },
+                {
+                  "name": "content",
+                  "label": "Content",
+                  "type": "text"
+                }
+              ] 
+          },
+          "post": {
+            "url": "/posts",
+            "fields": [
+              {
+                "name": "title",
+                "label": "Title",
+                "type": "text"
+              },
+              {
+                "name": "content",
+                "label": "Content",
+                "type": "text"
+              }
+            ]
+          },
+          "getSingle": {
+            "url": "/posts/:id",
+            "queryParams": [],
+            "fields": [
+              {
+                "name": "id",
+                "label": "Post ID",
+                "type": "text",
+                "readonly": true
+              }
+            ]
+          },
+          "put": {
+            "url": "/posts/:id",
+            "fields": [
+              {
+                "name": "title",
+                "label": "Title",
+                "type": "text"
+              },
+              {
+                "name": "content",
+                "label": "Content",
+                "type": "text"
+              }
+            ]
+          },
+          "delete": {
+            "url": "/posts/:id",
+            "fields": [
+              {
+                "name": "id",
+                "label": "Post ID",
+                "type": "text",
+                "readonly": true
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Users",
+        "id": "users",
+        "description": "Operations about users",
+        "methods": {
+          "getAll": {
+            "url": "/users",
+            "display": {
+              "type": "cards"
+            },
+            "fields": [
+                {
+                  "name": "name",
+                  "label": "Name",
+                  "type": "text"
+                },
+                {
+                  "name": "email",
+                  "label": "Email",
+                  "type": "text"
+                }
+              ]
+          },
+          "post": {
+            "url": "/users",
+            "fields": [
+              {
+                "name": "name",
+                "label": "Name",
+                "type": "text"
+              },
+              {
+                "name": "email",
+                "label": "Email",
+                "type": "text"
+              }
+            ]
+          },
+          "getSingle": {
+            "url": "/users/:id",
+            "queryParams": [],
+            "fields": [
+              {
+                "name": "id",
+                "label": "User ID",
+                "type": "text",
+                "readonly": true
+              }
+            ]
+          },
+          "put": {
+            "url": "/users/:id",
+            "fields": [
+              {
+                "name": "name",
+                "label": "Name",
+                "type": "text"
+              },
+              {
+                "name": "email",
+                "label": "Email",
+                "type": "text"
+              }
+            ]
+          },
+          "delete": {
+            "url": "/users/:id",
+            "fields": [
+              {
+                "name": "id",
+                "label": "User ID",
+                "type": "text",
+                "readonly": true
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+  

@@ -1,0 +1,4 @@
+# Local environment — never commit real values
+.env
+.env.local
+.env.*.local
